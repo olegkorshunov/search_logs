@@ -41,7 +41,7 @@ app = FastAPI(lifespan=lifespan)
 
 
 @app.post("/search")
-async def search(address: str = Form(...)) -> SearchResponse:
+async def search(address: str = Form(..., description="Email address")) -> SearchResponse:
     async with engine.begin() as conn:
         log_stmt = text(
             """
