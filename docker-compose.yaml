@@ -1,0 +1,23 @@
+version: "3.8"
+
+services:
+  database:
+    image: postgres:15
+    container_name: postgres
+    env_file:
+      - .env.example-postgresql-docker
+    expose:
+      - 5432
+    ports:
+      - 5432:5432
+
+  app:
+    build: 
+      context: .
+    container_name: search_logs
+    env_file:
+      - .env.example-app
+    ports:
+      - 8000:8000
+    depends_on:
+      - database

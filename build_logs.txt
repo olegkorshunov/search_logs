@@ -1,0 +1,127 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 248B 0.0s done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12
+#2 DONE 0.8s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/5] FROM docker.io/library/python:3.12@sha256:f71437b2bad6af0615875c8f7fbeeeae1b73e3c76b82056d283644aca5afe355
+#4 DONE 0.0s
+
+#5 [2/5] WORKDIR /search_logs
+#5 CACHED
+
+#6 [internal] load build context
+#6 transferring context: 59.33kB 0.3s done
+#6 DONE 0.4s
+
+#7 [3/5] COPY requirements.txt .
+#7 DONE 0.1s
+
+#8 [4/5] RUN pip install -r requirements.txt && pip list
+#8 2.575 Ignoring colorama: markers 'python_full_version >= "3.12.2" and platform_system == "Windows"' don't match your environment
+#8 2.825 Collecting annotated-types==0.7.0 (from -r requirements.txt (line 1))
+#8 3.067   Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+#8 3.192 Collecting anyio==4.6.2.post1 (from -r requirements.txt (line 2))
+#8 3.245   Downloading anyio-4.6.2.post1-py3-none-any.whl.metadata (4.7 kB)
+#8 3.459 Collecting asyncpg==0.30.0 (from -r requirements.txt (line 3))
+#8 3.515   Downloading asyncpg-0.30.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.0 kB)
+#8 3.627 Collecting click==8.1.7 (from -r requirements.txt (line 4))
+#8 3.680   Downloading click-8.1.7-py3-none-any.whl.metadata (3.0 kB)
+#8 3.887 Collecting fastapi==0.115.5 (from -r requirements.txt (line 6))
+#8 3.940   Downloading fastapi-0.115.5-py3-none-any.whl.metadata (27 kB)
+#8 4.350 Collecting greenlet==3.1.1 (from -r requirements.txt (line 7))
+#8 4.405   Downloading greenlet-3.1.1-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (3.8 kB)
+#8 4.498 Collecting h11==0.14.0 (from -r requirements.txt (line 8))
+#8 4.551   Downloading h11-0.14.0-py3-none-any.whl.metadata (8.2 kB)
+#8 4.649 Collecting idna==3.10 (from -r requirements.txt (line 9))
+#8 4.702   Downloading idna-3.10-py3-none-any.whl.metadata (10 kB)
+#8 6.106 Collecting pydantic-core==2.23.4 (from -r requirements.txt (line 10))
+#8 6.162   Downloading pydantic_core-2.23.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.6 kB)
+#8 6.273 Collecting pydantic-settings==2.6.1 (from -r requirements.txt (line 11))
+#8 6.326   Downloading pydantic_settings-2.6.1-py3-none-any.whl.metadata (3.5 kB)
+#8 6.663 Collecting pydantic==2.9.2 (from -r requirements.txt (line 12))
+#8 6.716   Downloading pydantic-2.9.2-py3-none-any.whl.metadata (149 kB)
+#8 6.913 Collecting python-dotenv==1.0.1 (from -r requirements.txt (line 13))
+#8 6.966   Downloading python_dotenv-1.0.1-py3-none-any.whl.metadata (23 kB)
+#8 7.061 Collecting python-multipart==0.0.17 (from -r requirements.txt (line 14))
+#8 7.115   Downloading python_multipart-0.0.17-py3-none-any.whl.metadata (1.8 kB)
+#8 7.200 Collecting sniffio==1.3.1 (from -r requirements.txt (line 15))
+#8 7.254   Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+#8 8.025 Collecting sqlalchemy==2.0.36 (from -r requirements.txt (line 16))
+#8 8.084   Downloading SQLAlchemy-2.0.36-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.7 kB)
+#8 8.244 Collecting starlette==0.41.3 (from -r requirements.txt (line 17))
+#8 8.298   Downloading starlette-0.41.3-py3-none-any.whl.metadata (6.0 kB)
+#8 8.403 Collecting typing-extensions==4.12.2 (from -r requirements.txt (line 18))
+#8 8.468   Downloading typing_extensions-4.12.2-py3-none-any.whl.metadata (3.0 kB)
+#8 8.596 Collecting uvicorn==0.32.0 (from -r requirements.txt (line 19))
+#8 8.652   Downloading uvicorn-0.32.0-py3-none-any.whl.metadata (6.6 kB)
+#8 8.970 Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+#8 9.046 Downloading anyio-4.6.2.post1-py3-none-any.whl (90 kB)
+#8 9.125 Downloading asyncpg-0.30.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.6 MB)
+#8 9.683    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.6/3.6 MB 6.6 MB/s eta 0:00:00
+#8 9.739 Downloading click-8.1.7-py3-none-any.whl (97 kB)
+#8 9.816 Downloading fastapi-0.115.5-py3-none-any.whl (94 kB)
+#8 9.896 Downloading greenlet-3.1.1-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (613 kB)
+#8 9.985    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 613.1/613.1 kB 5.8 MB/s eta 0:00:00
+#8 10.04 Downloading h11-0.14.0-py3-none-any.whl (58 kB)
+#8 10.11 Downloading idna-3.10-py3-none-any.whl (70 kB)
+#8 10.19 Downloading pydantic_core-2.23.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+#8 10.64    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 4.8 MB/s eta 0:00:00
+#8 10.69 Downloading pydantic_settings-2.6.1-py3-none-any.whl (28 kB)
+#8 10.76 Downloading pydantic-2.9.2-py3-none-any.whl (434 kB)
+#8 10.93 Downloading python_dotenv-1.0.1-py3-none-any.whl (19 kB)
+#8 11.00 Downloading python_multipart-0.0.17-py3-none-any.whl (24 kB)
+#8 11.07 Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+#8 11.14 Downloading SQLAlchemy-2.0.36-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.2 MB)
+#8 11.88    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 4.4 MB/s eta 0:00:00
+#8 11.94 Downloading starlette-0.41.3-py3-none-any.whl (73 kB)
+#8 12.02 Downloading typing_extensions-4.12.2-py3-none-any.whl (37 kB)
+#8 12.09 Downloading uvicorn-0.32.0-py3-none-any.whl (63 kB)
+#8 12.23 Installing collected packages: typing-extensions, sniffio, python-multipart, python-dotenv, idna, h11, greenlet, click, asyncpg, annotated-types, uvicorn, sqlalchemy, pydantic-core, anyio, starlette, pydantic, pydantic-settings, fastapi
+#8 16.02 Successfully installed annotated-types-0.7.0 anyio-4.6.2.post1 asyncpg-0.30.0 click-8.1.7 fastapi-0.115.5 greenlet-3.1.1 h11-0.14.0 idna-3.10 pydantic-2.9.2 pydantic-core-2.23.4 pydantic-settings-2.6.1 python-dotenv-1.0.1 python-multipart-0.0.17 sniffio-1.3.1 sqlalchemy-2.0.36 starlette-0.41.3 typing-extensions-4.12.2 uvicorn-0.32.0
+#8 16.02 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable.It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#8 16.39 
+#8 16.39 [notice] A new release of pip is available: 24.2 -> 24.3.1
+#8 16.39 [notice] To update, run: pip install --upgrade pip
+#8 17.04 Package           Version
+#8 17.04 ----------------- -----------
+#8 17.04 annotated-types   0.7.0
+#8 17.04 anyio             4.6.2.post1
+#8 17.04 asyncpg           0.30.0
+#8 17.04 click             8.1.7
+#8 17.04 fastapi           0.115.5
+#8 17.04 greenlet          3.1.1
+#8 17.04 h11               0.14.0
+#8 17.04 idna              3.10
+#8 17.04 pip               24.2
+#8 17.04 pydantic          2.9.2
+#8 17.04 pydantic_core     2.23.4
+#8 17.04 pydantic-settings 2.6.1
+#8 17.04 python-dotenv     1.0.1
+#8 17.04 python-multipart  0.0.17
+#8 17.04 sniffio           1.3.1
+#8 17.04 SQLAlchemy        2.0.36
+#8 17.04 starlette         0.41.3
+#8 17.04 typing_extensions 4.12.2
+#8 17.04 uvicorn           0.32.0
+#8 DONE 17.2s
+
+#9 [5/5] COPY . .
+#9 DONE 0.1s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 0.7s done
+#10 writing image sha256:de1bfc74845d3eb7aedef9371c1264ef2dd680523ec8c66e22d259924560f429 done
+#10 naming to docker.io/library/search_logs 0.0s done
+#10 DONE 0.7s
+
+What's Next?
+  View a summary of image vulnerabilities and recommendations → docker scout quickview
