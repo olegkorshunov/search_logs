@@ -8,21 +8,21 @@ from src.database import create_tables, drop_tables, engine, insert_data
 
 
 class SearchResponse(BaseModel):
-    message_more_than_100: bool = Field(
-        ...,
-        description="Флаг, указывающий что найдено записей больше 100 в таблице message",
-    )
     log_more_than_100: bool = Field(
         ...,
         description="Флаг, указывающий что найдено записей больше 100 в таблице log",
     )
-    messages: list = Field(
+    message_more_than_100: bool = Field(
         ...,
-        description="Список записей из таблицы message",
+        description="Флаг, указывающий что найдено записей больше 100 в таблице message",
     )
     logs: list = Field(
         ...,
         description="Список записей из таблицы log",
+    )
+    messages: list = Field(
+        ...,
+        description="Список записей из таблицы message",
     )
 
     model_config = ConfigDict(from_attributes=True)
@@ -72,6 +72,6 @@ async def search(address: str = Form(...)) -> SearchResponse:
     return SearchResponse(
         log_more_than_100=len(logs_list) > 100,
         message_more_than_100=len(messages_list) > 100,
-        messages=messages_list[:100],
         logs=logs_list[:100],
+        messages=messages_list[:100],
     )
